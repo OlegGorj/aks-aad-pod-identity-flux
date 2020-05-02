@@ -39,3 +39,25 @@ kustomize/
             ├── kustomization.yaml
             └── <resource-manifests...>.yaml
 ```
+
+### Global configurations
+
+The default template structure uses the following Kustomize overlays for applying global resources. These include logging daemonsets, podsecuritypolicies or any type of resource that must be deployed similarly to every managed AKS cluster. Service tier & region customization is only required for labeling.
+
+Ensure that `FLUX_GIT_PATH` is set for this new repository in the configuration file `core-platform-aks/flux/conf/[[ REPO NAME ]].conf` to the following value:
+
+```bash
+FLUX_GIT_PATH="kustomize/${ENVIRONMENT}/${LOCATION}"
+```
+
+```bash
+$ tree kustomize/
+kustomize/
+└── global
+    ├── kustomization.yaml
+    └── <global resources...>.yaml
+...
+└── <service_tier>
+    └── <region>
+        └── kustomization.yaml
+```
