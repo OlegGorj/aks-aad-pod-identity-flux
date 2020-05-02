@@ -1,0 +1,9 @@
+version: 1
+patchUpdated:
+  generators:
+    - command: kustomize build .
+  # patchFile field is no-op
+  # It is required but only gets used when using automated image management.
+  # This is currently disabled during deployment.
+  # See https://docs.fluxcd.io/en/latest/references/automated-image-update.html for details
+  patchFile: flux-patch.yaml

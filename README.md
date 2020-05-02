@@ -30,7 +30,7 @@ kustomize/
     ├── kustomization.yaml
     └── <platform-global-resources...>.yaml
 ...
-└── <service_tier>
+└── <environmnet>
     └── <region>
         └── <cluster_name>
             ├── namespaces
