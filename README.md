@@ -1,4 +1,4 @@
-# aks-aad-pod-identity-flux
+# AKS AAD Pod Identity Flux
 
 Flux-managed repo to keep AKS AAD Pod Identity deployment configs
 
