@@ -57,7 +57,7 @@ kustomize/
     ├── kustomization.yaml
     └── <global resources...>.yaml
 ...
-└── <service_tier>
+└── <env>
     └── <region>
         └── kustomization.yaml
 ```
